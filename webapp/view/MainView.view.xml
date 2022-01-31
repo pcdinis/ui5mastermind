@@ -1,0 +1,25 @@
+<mvc:View
+	controllerName="pt.deploy.game.ui5mastermind.controller.MainView"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<FlexBox
+							alignItems="Center"
+							justifyContent="Center">
+							<VBox id="idScrMainVBox">
+								<!--<Button text="" icon="/images/yellowSquare.png" class="sapUiTinyMarginBegin"/>-->
+							</VBox>
+						</FlexBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

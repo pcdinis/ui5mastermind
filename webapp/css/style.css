@@ -1,0 +1,31 @@
+/* Enter your custom styles here */
+.roundClass .sapMBtnInner{
+	width: 40px;
+	height: 40px;
+    border-radius:30px;
+    background-color: #c0c0c0;
+  }
+
+.redBtColor .sapMBtnInner{
+	background-color: #FF0000;
+}
+
+.greenBtColor .sapMBtnInner{
+	background-color: #00FF00;
+}
+
+.yellowBtColor .sapMBtnInner {
+	background-color: #FFFF00;
+}
+
+.blueBtColor .sapMBtnInner {
+	background-color: #0000FF;
+}
+
+.blackBtColor .sapMBtnInner {
+	background-color: #000000;
+}
+
+.whiteBtColor .sapMBtnInner {
+	background-color: #FFFFFF;
+}
