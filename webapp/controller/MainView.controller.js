@@ -231,18 +231,44 @@ sap.ui.define([
                                 // Set icons with result (shuffled)
                                 var ico;
                                 var count = 0;
+                                var lvResultShuffled = [];
+                                // Set black results
+                                for(var x=0; x<4; x++){
+                                    if(lvResult[x] === 'B' ){
+                                        lvResultShuffled[count] = lvResult[x];
+                                        count = count + 1;
+                                    }
+                                }
+                                // Set white results
+                                for(x=0; x<4; x++){
+                                    if(lvResult[x] === 'W' ){
+                                        lvResultShuffled[count] = lvResult[x];
+                                        count = count + 1;
+                                    }
+                                }
+                                // Set icons
+                                count = 0;
                                 for(i=0; i<2; i++){
-                                    for(t=0; t<2; t++){
+                                    for(t=0; t<2; t++){ 
                                         var lvPath = 'idIcon' + guessRow.toString() + i.toString() + t.toString();
                                         ico = sap.ui.getCore().getElementById(lvPath);
-                                        if(lvResult[count] === 'B'){
-                                            ico.setSrc('sap-icon://sys-enter-2');
-                                        }else if(lvResult[count] === 'W'){
-                                            ico.setSrc('sap-icon://sys-enter');
-                                        }else{
-
+                                        var setResultIcon = false;
+                                        while(setResultIcon === false && count < 4){
+                                            if(lvResultShuffled[count] === 'B'){
+                                                ico.setSrc('sap-icon://sys-enter-2');
+                                                setResultIcon = true;
+                                            }else if(lvResultShuffled[count] === 'W'){
+                                                ico.setSrc('sap-icon://sys-enter');
+                                                setResultIcon = true;
+                                            }else{
+    
+                                            }
+                                            if(count > 3){
+                                                setResultIcon = true; 
+                                            }
+                                            count = count + 1; 
                                         }
-                                        count = count + 1; 
+
                                     }
                                 }
 
