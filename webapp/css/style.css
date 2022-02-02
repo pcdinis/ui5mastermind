@@ -29,3 +29,13 @@
 .whiteBtColor .sapMBtnInner {
 	background-color: #FFFFFF;
 }
+
+.roundBoldClass .sapMBtnInner{
+	width: 40px;
+	height: 40px;
+    border-radius:30px;
+	border-width:2px;
+	border-color: #000000;
+    background-color: #c0c0c0;
+	align-items: center;
+  }

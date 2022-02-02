@@ -35,7 +35,7 @@ sap.ui.define([
                 breakCode = [];
             },
 
-            buildBoardGame: function() {
+            buildBoardGame: function() { 
 				// Get Vertical Box object
 				var vMainVBox = this.getView().byId("idScrMainVBox");
 
@@ -49,7 +49,7 @@ sap.ui.define([
                     if(i === 0){
                         vHBox = new sap.m.HBox({
                             id : 'idHBx' + i.toString()
-                        }).addStyleClass("sapUiSmallMarginBottom");
+                        }).addStyleClass("sapUiSmallMarginBottom").addStyleClass("roundBoldClass");
                     }else{
                         vHBox = new sap.m.HBox({
                             id : 'idHBx' + i.toString()
@@ -60,10 +60,16 @@ sap.ui.define([
                     // COLUMNS
                    for(var b=0; b<4; b++){
                        var btID = 'idBt' + i.toString() + b.toString();
+                       if(i === 0){
+                          var txtBt = "?";
+                       }else{
+                        txtBt = "";
+                       }
                         vBt = new sap.m.Button({
                             id : btID,
                             icon : '',
-                            color : '#000000'
+                            color : '#000000',
+                            text : txtBt
                         }).addStyleClass("roundClass").addStyleClass("sapUiTinyMarginBegin");
 
                         vBt.attachPress( function(oEvent){ 
