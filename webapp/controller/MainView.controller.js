@@ -57,7 +57,7 @@ sap.ui.define([
                     }
                     vMainVBox.addItem(vHBox);
 
-                    // COLUMNS
+                    // COLUMNS 
                    for(var b=0; b<4; b++){
                        var btID = 'idBt' + i.toString() + b.toString();
                        if(i === 0){

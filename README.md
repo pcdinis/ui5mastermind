@@ -1,3 +1,5 @@
+webapp\images\GameScreenShot.png
+
 ### Masterming Game
 
 A game developed with UI5 libs
