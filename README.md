@@ -1,25 +1,19 @@
-## Application Details
-|               |
-| ------------- |
-|**Generation Date and Time**<br>Thu Jan 13 2022 18:16:09 GMT+0000 (Hora padrão da Europa Ocidental)|
-|**App Generator**<br>@sap/generator-fiori|
-|**App Generator Version**<br>1.4.5|
-|**Generation Platform**<br>Visual Studio Code|
-|**Floorplan Used**<br>simple|
-|**Service Type**<br>None|
-|**Service URL**<br>N/A
-|**Module Name**<br>ui5mastermind|
-|**Application Title**<br>Mastermind|
-|**Namespace**<br>pt.deploy.game|
-|**UI5 Theme**<br>sap_fiori_3|
-|**UI5 Version**<br>Latest|
-|**Enable Code Assist Libraries**<br>False|
-|**Add Eslint configuration**<br>False|
-|**Enable Telemetry**<br>True|
+### Masterming Game
 
-## ui5mastermind
+A game developed with UI5 libs
 
-A UI5 Game
+Instead of downloading games to play with my kid I decided to develop some simple games to play with him. This is not the state of the art on javascript language but I had a lot of fun learning about it.
+
+### Play the game
+
+If you want to play the game: https://www.pcdinis.com/mastermind/
+
+- The main goal is to break the secret color code hidden by the "?".;
+- Start in the lowest line and choose 4 colors (colors can be repeated);
+- You can check your result in the four little icons at your right:
+-- If a black check mark appears it means that you find a color and it's on the right spot;
+-- If a white check mark appears it means that you find a color but it's in the wrong place;
+-- The black and white marks appear in a random way that does not refer to the spot directly;
 
 ### Starting the generated app
 
