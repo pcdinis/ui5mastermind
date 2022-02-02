@@ -304,6 +304,10 @@ sap.ui.define([
                 oColorPalettePopoverMinDefautButton.openBy(oEvent.getSource());
             },
 
+            handleBackPress: function(evt) {
+                window.location.replace("https://www.pcdinis.com/webcenter/");
+            },
+
             getRandomCode: function(){
                 var result;
                 for(var i=0; i<4; i++){
