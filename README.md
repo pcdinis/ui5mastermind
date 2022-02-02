@@ -1,4 +1,4 @@
-<img src="webapp\images\GameScreenShot.png" width="200" height="400"/>
+<img src="webapp\images\GameScreenShot.png" width="200" height="400" align="center"/>
 
 ### Masterming Game
 
