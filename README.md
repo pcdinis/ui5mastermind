@@ -1,3 +1,5 @@
+#### Game screenshot:
+
 <p align="center">
 <img src="webapp\images\GameScreenShot.png" width="200px" height="400px"/>
 </p>
