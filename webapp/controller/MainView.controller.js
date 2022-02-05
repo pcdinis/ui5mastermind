@@ -49,7 +49,7 @@ sap.ui.define([
                     if(i === 0){
                         vHBox = new sap.m.HBox({
                             id : 'idHBx' + i.toString()
-                        }).addStyleClass("sapUiSmallMarginBottom").addStyleClass("roundBoldClass");
+                        }).addStyleClass("sapUiSmallMarginBottom"); //.addStyleClass("roundBoldClass");
                     }else{
                         vHBox = new sap.m.HBox({
                             id : 'idHBx' + i.toString()
@@ -61,16 +61,21 @@ sap.ui.define([
                    for(var b=0; b<4; b++){
                        var btID = 'idBt' + i.toString() + b.toString();
                        if(i === 0){
-                          var txtBt = "?";
-                       }else{
-                        txtBt = "";
-                       }
                         vBt = new sap.m.Button({
                             id : btID,
                             icon : '',
                             color : '#000000',
-                            text : txtBt
+                            text : "?"
+                        }).addStyleClass("roundBoldClass").addStyleClass("sapUiTinyMarginBegin");
+                       }else{
+                        vBt = new sap.m.Button({
+                            id : btID,
+                            icon : '',
+                            color : '#000000',
+                            text : ""
                         }).addStyleClass("roundClass").addStyleClass("sapUiTinyMarginBegin");
+                       }
+
 
                         vBt.attachPress( function(oEvent){ 
                             self.onBtPress(oEvent);
@@ -282,14 +287,22 @@ sap.ui.define([
                                 if(vWin_bl === true){
                                     for(i=0; i<4; i++){
                                     var btResult = sap.ui.getCore().getElementById('idBt0' + i.toString());
-                                    btResult.addStyleClass(breakCode[i] + "BtColor");
+                                    btResult.removeStyleClass(btResult.aCustomStyleClasses[2]);
+                                    btResult.removeStyleClass(btResult.aCustomStyleClasses[1]);
+                                    btResult.removeStyleClass(btResult.aCustomStyleClasses[0]);
+                                    btResult.addStyleClass("roundClass").addStyleClass("sapUiTinyMarginBegin").addStyleClass(breakCode[i] + "BtColor");
+                                    btResult.setText('');
                                     }
                                     guessRow = 1;
                                     sap.m.MessageBox.information("Congratulations! You break the secret code!");
                                 }else if(guessRow === 1){
                                     for(i=0; i<4; i++){
                                         var btResult = sap.ui.getCore().getElementById('idBt0' + i.toString());
-                                        btResult.addStyleClass(breakCode[i] + "BtColor");
+                                        btResult.removeStyleClass(btResult.aCustomStyleClasses[2]);
+                                        btResult.removeStyleClass(btResult.aCustomStyleClasses[1]);
+                                        btResult.removeStyleClass(btResult.aCustomStyleClasses[0]);                                        
+                                        btResult.addStyleClass("roundClass").addStyleClass("sapUiTinyMarginBegin").addStyleClass(breakCode[i] + "BtColor");
+                                        btResult.setText('');
                                     }
                                     sap.m.MessageBox.information("You didn't accomplish to break the secret code! Try next time!");
                                 }
