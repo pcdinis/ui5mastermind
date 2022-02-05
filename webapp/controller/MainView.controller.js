@@ -294,7 +294,8 @@ sap.ui.define([
                                     btResult.setText('');
                                     }
                                     guessRow = 1;
-                                    sap.m.MessageBox.information("Congratulations! You break the secret code!");
+                                    sap.m.MessageToast.show("Congratulations! You break the secret code!");
+                                    //sap.m.MessageBox.success("Congratulations! You break the secret code!");
                                 }else if(guessRow === 1){
                                     for(i=0; i<4; i++){
                                         var btResult = sap.ui.getCore().getElementById('idBt0' + i.toString());
@@ -304,7 +305,8 @@ sap.ui.define([
                                         btResult.addStyleClass("roundClass").addStyleClass("sapUiTinyMarginBegin").addStyleClass(breakCode[i] + "BtColor");
                                         btResult.setText('');
                                     }
-                                    sap.m.MessageBox.information("You didn't accomplish to break the secret code! Try next time!");
+                                    sap.m.MessageToast.show("You didn't accomplish to break the secret code! Try next time!");
+                                    //sap.m.MessageBox("You didn't accomplish to break the secret code! Try next time!");
                                 }
 
                                 // Update guess row
